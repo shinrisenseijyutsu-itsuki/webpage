@@ -1,0 +1,15 @@
+/* 610px以下の画面での表示 */
+
+#kansouArea {
+  margin: 50px 20px;
+}
+
+.s_br {
+  display: block;
+}
+
+.eyeCatchContainer p {
+  font-size: 25px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+}
