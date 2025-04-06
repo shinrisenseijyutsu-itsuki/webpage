@@ -1,0 +1,398 @@
+
+@charset "UTF-8";
+
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  /* background: #F0EFE2; */
+  color: #565656db;
+  font-family: Kokoro, "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体;
+}
+
+body {
+  background: #FEF9F2;
+}
+
+section {
+  text-align: center;
+  padding: 0 10px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  font-family: Kokoro, "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体;
+  
+}
+.s_br {
+  display: none;
+}
+
+
+/* google font */
+.yomogi-regular {
+  font-family: "Yomogi", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.zen-kaku-gothic-new-regular {
+  font-family: "Zen Kaku Gothic New", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.zen-maru-gothic-regular {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900 */
+.noto-sans-jp-light {
+  font-family: "Noto Sans JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.noto-sans-jp-bold {
+  font-family: "Noto Sans JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* メニューボタン */
+.menuButton {
+  /*! margin: 10px 10px 10px auto; */
+  border: solid 2px #7F7F7F;
+  width: 110px;
+  text-align: center;
+  border-radius: 100vh;
+  padding: 1px 10px 5px 10px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* メニュー閉じるボタン */
+.menuClose{
+  display: block;
+  position: fixed;
+  width: 30px;
+  height: 38.4px;
+  /*! margin: 10px 45px 10px auto; */
+  z-index: 1000;
+  /* display: none; */
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+.menuClose::before, .menuClose::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px; /*線の太さ*/
+  height: 30px; /*アイコン高さ*/
+  background: #404040;
+  border-radius: 2.5px;
+}
+.menuClose::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.menuClose::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* メニュー */
+.menuArea {
+  display: flex;
+  flex-direction: column;
+  background: #FFEB3B;
+  display: none;
+  /* opacity: 0; */
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 1000;
+}
+.menuArea::before {
+  content: "";
+  margin-bottom: 20px;
+}
+.menuArea::after {
+  content: "";
+  margin-top: 20px;
+}
+.menuArea .menuOne {
+  background: #FFE9E7;
+  box-sizing: border-box;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px #565656db solid;
+}
+.firstMenu {
+  border-top: 1px #565656db solid;
+}
+
+main {
+  /*! margin: ; */
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+
+
+/* アイキャッチ */
+#eyeCatch {
+  width: 100%;
+  max-width: 550px;
+  background-image: url('../img/seiza_all_maru.png');
+  aspect-ratio: 1;
+  background-size: contain;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  animation:420s linear infinite rotation1;
+  border-radius: 50%;
+  overflow: hidden;
+  /*! margin-bottom: 200px; */
+}
+.eyeCatchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 750px;
+  /* height: 250px; */
+  aspect-ratio: 1;
+  /*! background: rgba(240,239, 226, 0.5); */
+  animation:420s linear infinite rotation2;
+}
+@keyframes rotation1{
+  0%{ transform:rotate(0);}
+  100%{ transform:rotate(360deg); }
+}
+@keyframes rotation2{
+  0%{ transform:rotate(0);}
+  100%{ transform:rotate(-360deg); }
+}
+.eyeCatchContainer p {
+  font-size: 30px;
+}
+
+
+
+
+
+/* 名前エリア */
+.titleArea {
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-left: 15px;
+}
+.titleLarge {
+  font-size: 40px;
+  letter-spacing: 0.3em;
+  line-height: 2;
+}
+.titleSmall {
+  letter-spacing: 0.05em;
+  padding-right: 15px;
+  padding-bottom: 30px;
+}
+/* 名前エリア ここまで↑----------*/
+
+
+/* トピックエリア */
+.topicTitleArea {
+  /*! padding-top: 50px; */
+  text-align: center;
+  padding-bottom: 40px;
+}
+.topicTitle {
+  /* background-color: #EAEAE4; */
+  font-size: 20px;
+  font-weight: 450;
+  font-style: oblique;
+  margin-bottom: -13px;
+}
+.topicTitleArea {
+  /*! text-align: center; */
+  padding-top: 140px;
+}
+.topicTitle p {
+  margin: 0;
+  padding-left: 5px;
+  font-size: 20px;
+}
+.topicSection {
+  padding-bottom: 50px;
+}
+.secion_style_1{
+  position: relative;
+}
+.custom-shape-divider-top-1740282227 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.custom-shape-divider-top-1740282227 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 58px;
+  transform: rotateY(180deg);
+}
+.custom-shape-divider-top-1740282227 .shape-fill {
+  fill: #FEF9F2;
+}
+.shape-fill2 {
+  fill: #ECE6DC;
+}
+.topicOdd {
+  background-color: #ECE6DC;
+}
+.blogSetsumei {
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+.blogLink {
+  background-color: #BFA06B;
+  border-radius: 10px;
+  padding: 5px 10px 7px 10px;
+  width: 150px;
+  margin: auto;
+}
+.blogLink a{
+  color: antiquewhite;
+}
+#topic2 {
+  padding-bottom: 50px;
+}
+.topicDescription {
+  text-align: center;
+}
+/* トピックエリア ここまで↑------- */
+
+
+
+/* 提供中のメニューエリア */
+#kansouArea {
+  background-color: #C8E0E1;
+  /*! margin: 50px 20px; */
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 30px;
+  max-width: 650px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.kansouAreaTitle {
+  /*! padding: 30px 0; */
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.description_1 {
+  max-width: 550px;
+  margin: auto;
+  border-radius: 10px solid;
+}
+.teikyouMenu1 {
+  text-align: left;
+}
+.teikyouMenuTitle {
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+li.kansou {
+  margin-bottom: 15px;
+  font-size: 17px;
+  list-style-type: circle;
+  list-style-position: inside;
+  text-indent: -1.2em;
+  padding-left: 1.2em;
+}
+/* 提供中のメニューエリア ここまで↑-------- */
+
+
+/* コンタクトエリアここから↓ */
+/* 予約ボタンを公開するときにコメントアウト外す */
+/* #contactArea {
+  background-color: #FEF9F2;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 50px;
+} */
+/* コメントアウト外す。ここまで↑ */
+
+/* 薄めの茶色のボタン */
+.button1 { 
+  background-color: #BFA06B;
+  border-radius: 10px;
+  padding: 5px 10px 8px 10px;
+  width: 200px;
+  margin: auto;
+}
+.button1 a {
+  color: antiquewhite;
+}
+
+/* 濃い目の茶色のボタン */
+.button2 {
+  background-color: #3F342D;
+  border-radius: 10px;
+  padding: 5px 10px 8px 10px;
+  width: 200px;
+  margin: auto;
+  margin-top: 20px;
+}
+.button2 a {
+  color: antiquewhite;
+}
+
+#contactArea2 {
+  background-color: #D8F9E7;
+  padding: 30px 0;
+}
+.contactArea2inner {
+  width: 331px;
+  margin: auto;
+}
+.contactName {
+  padding-top: 30px;
+}
+.contactIcon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contactIcon img{
+  padding-top: 5px;
+}
+/* コンタクトエリアここまで↑ */
+
+
+footer{
+  background:#B5D9C2;
+  width:100%;
+  margin:0 auto;
+  text-align: center;
+  padding:10px;
+}
